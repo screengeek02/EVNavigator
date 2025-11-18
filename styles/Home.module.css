@@ -1,0 +1,361 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.16), transparent 55%),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.02), rgba(148, 163, 184, 0.08));
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem clamp(1.5rem, 6vw, 4rem) 1.5rem;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  color: #0f172a;
+}
+
+.logoBadge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #3b82f6, #22d3ee);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.4rem;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.navLinks a:hover {
+  color: #0f172a;
+}
+
+.hero {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 4rem);
+  padding: 2rem clamp(1.5rem, 6vw, 4rem) 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.badgeRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.12);
+  color: #1d4ed8;
+  font-weight: 600;
+  font-size: 0.85rem;
+  width: fit-content;
+}
+
+.title {
+  font-size: clamp(2.75rem, 6vw, 4rem);
+  line-height: 1.04;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.title span {
+  color: #2563eb;
+}
+
+.subtitle {
+  color: #475569;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  max-width: 560px;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #2563eb, #22d3ee);
+  color: #fff;
+  padding: 0.85rem 1.6rem;
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.25);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 50px rgba(37, 99, 235, 0.3);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #2563eb;
+  padding: 0.85rem 1.1rem;
+}
+
+.secondaryButton svg {
+  transition: transform 0.2s ease;
+}
+
+.secondaryButton:hover svg {
+  transform: translateX(4px);
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.metricCard {
+  padding: 1.1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+.metricValue {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.metricLabel {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.heroVisual {
+  position: relative;
+  isolation: isolate;
+}
+
+.glassCard {
+  position: relative;
+  border-radius: 24px;
+  padding: 1.6rem;
+  background: linear-gradient(160deg, rgba(15, 23, 42, 0.96), rgba(30, 64, 175, 0.85));
+  color: #e2e8f0;
+  box-shadow: 0 25px 60px rgba(30, 64, 175, 0.35);
+  overflow: hidden;
+}
+
+.glassCard::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  opacity: 0.6;
+}
+
+.mapPreview {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 1.4rem;
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.18);
+}
+
+.mapImage {
+  width: 100%;
+  display: block;
+}
+
+.routeDetails {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1.4rem;
+  font-size: 0.95rem;
+}
+
+.routeRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.routeIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(96, 165, 250, 0.18);
+  color: #38bdf8;
+}
+
+.planSection {
+  display: grid;
+  gap: 2.5rem;
+  padding: 0  clamp(1.5rem, 6vw, 4rem) 4rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.sectionSubtitle {
+  color: #475569;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+}
+
+.featureGrid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.featureCard {
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  display: grid;
+  gap: 1rem;
+}
+
+.featureIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.16), rgba(14, 165, 233, 0.35));
+  color: #1d4ed8;
+}
+
+.featureTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.featureDescription {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.testimonial {
+  margin-top: 1rem;
+  padding: 1.6rem;
+  border-radius: 18px;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  display: grid;
+  gap: 0.7rem;
+}
+
+.testimonialQuote {
+  font-style: italic;
+  color: #1e293b;
+}
+
+.testimonialAuthor {
+  color: #475569;
+  font-weight: 600;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 2.5rem clamp(1.5rem, 6vw, 4rem) 3rem;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.footerGrid {
+  display: grid;
+  gap: 1.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.footerColumn {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.footerTitle {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.footerLink {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.footerLink:hover {
+  color: #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+  }
+
+  .ctaRow {
+    justify-content: center;
+  }
+
+  .hero {
+    padding-bottom: 2.5rem;
+  }
+
+  .metrics {
+    gap: 0.9rem;
+  }
+}
